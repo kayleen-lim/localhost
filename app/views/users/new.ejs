@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../_partials/head.ejs %>
+</head>
+<body>
+	<header>
+		<% include ../_partials/navbar.ejs %>
+	</header>
+	<main>
+		<div class="jumbotron text-center">
+			<h1>Signup</h1>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<form action="/u" class="form-horizontal col-xs-offset-3" method="post">
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="email">Email</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="email" name="email" placeholder="username@domain.com" type="email">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="username">Username</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="username" name="username" placeholder="username" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="password">Password</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="password" name="password" placeholder="password" type="password">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-10 col-xs-offset-2">
+								<button class="btn btn-default" type="submit">Signup</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
