@@ -10,19 +10,30 @@ var bcrypt = require('bcrypt')
 //	SCHEMA
 
 var UserSchema = new mongoose.Schema({
+	coverImageProfileURL:String,
+	coverImageThumbnailURL:String,
 	destination:{
 		ref:'Destination',
 		type:mongoose.Schema.Types.ObjectId
 	},
-	email:{
+	displayURL:String,
+	emailAddress:{
 		required:true,
 		type:String
 	},
+	firstName:String,
+	hireDate:Date,
 	isHost:Boolean,
+	jobTitle:String,
+	lastName:String,
+	locationName:String,
+	name:String,
 	password:{
 		required:true,
 		type:String
 	},
+	preferredName:String,
+	profileImageURL:String,
 	username:{
 		required:true,
 		type:String
