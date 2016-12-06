@@ -5,30 +5,30 @@
 //	DEPENDENCIES
 
 var authController = require('../../app/controllers/auth')
-,	localesController = require('../../app/controllers/locales')
-,	localesRouter = require('express').Router();
+,	destinationsController = require('../../app/controllers/destinations')
+,	destinationsRouter = require('express').Router();
 
 //	ROUTES
 
-localesRouter.route('/')
+destinationsRouter.route('/')
 
-	.get(authController.validate, localesController.index)
-	.post(authController.validate, localesController.add);
+	.get(authController.validate, destinationsController.index)
+	.post(authController.validate, destinationsController.add);
 
-localesRouter.route('/new')
+destinationsRouter.route('/new')
 
-	.get(authController.validate, localesController.new);
+	.get(authController.validate, destinationsController.new);
 
-localesRouter.route('/:id')
+destinationsRouter.route('/:id')
 
-	.delete(authController.validate, localesController.remove)
-	.get(authController.validate, localesController.view)
-	.post(authController.validate, localesController.update);
+	.delete(authController.validate, destinationsController.remove)
+	.get(authController.validate, destinationsController.view)
+	.post(authController.validate, destinationsController.update);
 
-localesRouter.route('/:id/edit')
+destinationsRouter.route('/:id/edit')
 
-	.get(authController.validate, localesController.edit);
+	.get(authController.validate, destinationsController.edit);
 
 //	EXPORT
 
-module.exports = localesRouter;
+module.exports = destinationsRouter;
