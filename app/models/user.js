@@ -17,7 +17,7 @@ var UserSchema = new mongoose.Schema({
 		type:mongoose.Schema.Types.ObjectId
 	},
 	displayURL:String,
-	emailAddress:{
+	email:{
 		required:true,
 		type:String
 	},

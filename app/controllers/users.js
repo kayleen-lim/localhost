@@ -24,7 +24,7 @@ exports.add = function(req, res, next) {
 				next(err);
 			}
 
-			res.redirect('/u/' + user.id);
+			res.redirect('/');
 		});
 	});
 };
