@@ -10,10 +10,15 @@ var bcrypt = require('bcrypt')
 //	SCHEMA
 
 var UserSchema = new mongoose.Schema({
+	destination:{
+		ref:'Destination',
+		type:mongoose.Schema.Types.ObjectId
+	},
 	email:{
 		required:true,
 		type:String
 	},
+	isHost:Boolean,
 	password:{
 		required:true,
 		type:String
