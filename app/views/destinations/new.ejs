@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../_partials/head.ejs %>
+</head>
+<body>
+	<header>
+		<% include ../_partials/navbar.ejs %>
+	</header>
+	<main>
+		<div class="jumbotron text-center">
+			<h1>
+				New Destination
+			</h1>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<form action="/d" class="form-horizontal col-xs-offset-2" method="post">
+						<div class="form-group">
+							<label class="col-xs-3 control-label" for="name">Name</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="name" name="name" placeholder="Name" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-3 control-label" for="description">Description</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="description" name="description" placeholder="Description" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-3 control-label" for="address">Address</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="address" name="address" placeholder="Address" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-3 control-label" for="city">City</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="city" name="city" placeholder="City" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-3 control-label" for="stateProvincePrefecture">State/Province/Prefecture</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="stateProvincePrefecture" name="stateProvincePrefecture" placeholder="State/Province/Prefecture" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-3 control-label" for="country">Country</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="country" name="country" placeholder="Country" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-3 control-label" for="postalCode">Postal Code</label>
+							<div class="col-xs-5">
+								<input class="form-control" id="postalCode" name="postalCode" placeholder="Postal Code" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-10 col-xs-offset-3">
+								<button class="btn btn-default" type="submit">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
