@@ -1,25 +1,43 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">
+	<ul class="container-fluid">
+		<li class="navbar-header">
+			<a class="navbar-brand hidden-xs" href="/">
 				<span class="glyphicon glyphicon-plane"></span>
-				localehost
+				Local Host
 			</a>
-		</div>
-		<nav>
-			<ul class="nav navbar-nav navbar-right">
-				<% if (typeof user != 'undefined') { %>
-				<li>
-					<a href="/u/<%= user.id %>"><%= user.username %></a>
-				</li>
-				<li>
-					<a href="/signout">Signout</a>
-				</li>
-				<% } else { %>
-				<li>
-					<a href="/signin">Signin</a>
-				<% } %>
-			</ul>
-		</nav>
-	</div>
+		</li>
+
+		<li class="navbar-header pull-right">
+			<% if (typeof user != 'undefined') { %>
+				<a class="account" href="javascript:;" onclick="$('.account-dropdown').hasClass('expanded') ? $('.account-dropdown').removeClass('expanded') : $('.account-dropdown').addClass('expanded');">
+					<img alt="avatar" class="avatar avatar-sm"
+						<% if(user.profileImageURL){ %>
+							src="<%= user.profileImageURL %>"
+						<% } else{ %>
+							src="https://www.liferay.com/image/user_male_portrait"
+						<% } %>
+					>
+					<span><%= user.username %></span>
+					<span class="caret"></span>
+				</a>
+
+				<ul class="account-dropdown no-padding">
+					<li>
+						<a href="/u/<%= user.id %>">Profile</a>
+					</li>
+					<!-- <li>
+						<a href="">Bookings</a>
+					</li> -->
+					<li>
+						<a href="">Help</a>
+					</li>
+					<li>
+						<a href="/signout">Sign Out</a>
+					</li>
+				</ul>
+			<% } else { %>
+				<a class="account" href="/signin">Sign In</a>
+			<% } %>
+		</li>
+	</ul>
 </nav>
