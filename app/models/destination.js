@@ -1,5 +1,5 @@
 //
-//	LOCALE MODEL
+//	DESTINATION MODEL
 //
 
 //	DEPENDENCIES
@@ -8,10 +8,10 @@ var mongoose = require('mongoose');
 
 //	SCHEMA
 
-var LocaleSchema = new mongoose.Schema({
+var DestinationSchema = new mongoose.Schema({
 	description:String,
-	localeHosts:[{
-		ref:'LocaleHost',
+	users:[{
+		ref:'User',
 		type:mongoose.Schema.Types.ObjectId
 	}],
 	name:{
@@ -28,6 +28,6 @@ var LocaleSchema = new mongoose.Schema({
 
 //	EXPORT
 
-var Locale = mongoose.model('Locale', LocaleSchema);
+var Destination = mongoose.model('Destination', DestinationSchema);
 
-module.exports = Locale;
+module.exports = Destination;
