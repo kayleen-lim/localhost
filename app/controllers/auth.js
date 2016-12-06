@@ -14,6 +14,10 @@ exports.authenticate = passport.authenticate('local', {
 	successRedirect:'/'
 });
 
+exports.authenticateAPI = passport.authenticate('local', {
+	session:false
+});
+
 exports.validate = function(req, res, next) {
 	if (req.isAuthenticated()) {
 		next();

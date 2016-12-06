@@ -12,7 +12,7 @@ var authController = require('../../../app/controllers/auth')
 
 usersAPIRouter.route('/')
 
-	.post(authController.validateAPI, usersAPIController.add);
+	.post(authController.authenticateAPI, usersAPIController.add);
 
 //	EXPORT
 
