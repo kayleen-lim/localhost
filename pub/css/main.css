@@ -29,7 +29,7 @@ h4 {
 	font-weight: 300;
 }
 
-main {
+section {
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -54,11 +54,16 @@ main {
 .upper-case {
 	text-transform: uppercase;
 }
+
 /*index*/
 .city {
 	background-color: #1BB0CE;
 	height: 16em;
-	margin: 1em;
+	margin: .5em;
+}
+
+.city:first-child {
+	margin-left: 0;
 }
 
 .city h2 {
