@@ -9,34 +9,111 @@
 	</header>
 	<main>
 		<div class="jumbotron text-center">
-			<h1>User Profile</h1>
+			<h1><%= user.username %>'s Profile</h1>
+			<img alt="avatar" class="avatar"
+				<% if(user.profileImageURL){ %>
+					src="<%= user.profileImageURL %>"
+				<% } else{ %>
+					src="https://www.liferay.com/image/user_male_portrait"
+				<% } %>
+			<p><%= user.locationName %></p>
 		</div>
+
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
 					<form action="/u/<%= user.id %>/edit" class="form form-horizontal col-xs-offset-2" method="get">
 						<div class="form-group">
-							<label class="control-label col-xs-2" for="email">Email</label>
-							<div class="col-xs-6">
+							<label class="control-label col-xs-3" for="email">Email</label>
+							<div class="col-xs-5">
 								<fieldset disabled>
 									<input class="form-control" id="email" name="email" type="email" value="<%= user.email %>">
 								</fieldset>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-xs-2" for="username">Username</label>
-							<div class="col-xs-6">
+							<label class="control-label col-xs-3" for="username">Username</label>
+							<div class="col-xs-5">
 								<fieldset disabled>
 									<input class="form-control" id="username" name="username" type="text" value="<%= user.username %>">
 								</fieldset>
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-xs-10 col-xs-offset-2">
+							<div class="col-xs-10 col-xs-offset-3">
 								<button class="btn btn-default" type="submit">Edit</button>
 							</div>
 						</div>
 					</form>
+
+					<section class="col-xs-12 standard-padding-vertical">
+						<a class="host-cta btn btn-default col-xs-offset-5" href="javascript:;" onclick="$('.host-form').hasClass('hide') ? $('.host-form').removeClass('hide') : $('.host-form').addClass('hide');">Become a Host <span class="caret"></span></a>
+						<form action="" class="host-form hide form form-horizontal col-xs-offset-2 standard-padding-vertical" method="post">
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="guests">Guests</label>
+								<div class="col-xs-5">
+									<select class="form-control">
+										<option selected>1 guest</option>
+										<option>2 guests</option>
+										<option>3 guests</option>
+										<option>4 guests</option>
+										<option>5 guests</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="address">Street Address</label>
+								<div class="col-xs-5">
+									<fieldset>
+										<input class="form-control" id="address" name="address" type="text">
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="city">City</label>
+								<div class="col-xs-5">
+									<fieldset>
+										<input class="form-control" id="city" name="city" type="text">
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="stateProvincePrefecture">State/Province/Prefecture</label>
+								<div class="col-xs-5">
+									<fieldset>
+										<input class="form-control" id="stateProvincePrefecture" name="stateProvincePrefecture" type="text">
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="country">Country</label>
+								<div class="col-xs-5">
+									<fieldset>
+										<input class="form-control" id="country" name="state" type="text">
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="postal code">Postal Code</label>
+								<div class="col-xs-5">
+									<fieldset>
+										<input class="form-control" id="postalCode" name="postal code" type="text">
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-xs-10 col-xs-offset-3">
+									<button class="btn btn-default" type="save">Save</button>
+								</div>
+							</div>
+						</form>
+					</section>
 				</div>
 			</div>
 		</div>

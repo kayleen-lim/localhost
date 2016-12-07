@@ -1,1 +1,1 @@
-#	Liferay localeHost
+#	Liferay Local Host
