@@ -120,6 +120,11 @@ section {
 	padding-right: 1em;
 }
 
+.standard-padding-vertical {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
 .upper-case {
 	text-transform: uppercase;
 }
