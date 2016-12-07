@@ -76,9 +76,9 @@ section {
 }
 
 .jumbotron {
-	background-color: #C8C8C8;
+	background-color: #1BB0CE;
 	color: #FFF;
-	margin-top:85px;
+	margin-top: 85px;
 }
 
 /*utility classes*/
@@ -145,6 +145,7 @@ section {
 
 .city h2 {
 	font-weight: bold;
+	text-shadow: 1px 1px rgba(0,0,0,.5);
 }
 
 .city h4 {
