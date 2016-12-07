@@ -86,16 +86,38 @@ section {
 	align-items: center;
 }
 
+.align-end {
+	align-items: flex-end;
+}
+
 .flex {
 	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
 }
 
 .justify-center {
 	justify-content: center;
 }
 
+.justify-end {
+	justify-content: flex-end;
+}
+
 .no-padding {
 	padding: 0;
+}
+
+.small-padding-horizontal {
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.standard-padding-horizontal {
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 .upper-case {
@@ -105,6 +127,9 @@ section {
 /*index*/
 .city {
 	background-color: #1BB0CE;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: 16em;
 	margin: .5em;
 }
@@ -114,8 +139,15 @@ section {
 }
 
 .city h2 {
-	color: #FFF;
 	font-weight: bold;
+}
+
+.city h4 {
+	padding-bottom: 1em;
+}
+
+.city h2, .city h4 {
+	color: #FFF;
 }
 
 .region {
