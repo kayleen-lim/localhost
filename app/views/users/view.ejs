@@ -9,7 +9,14 @@
 	</header>
 	<main>
 		<div class="jumbotron text-center">
-			<h1>User Profile</h1>
+			<h1><%= user.name %>'s Profile</h1>
+			<img alt="avatar" class="avatar"
+				<% if(user.profileImageURL){ %>
+					src="<%= user.profileImageURL %>"
+				<% } else{ %>
+					src="https://www.liferay.com/image/user_male_portrait"
+				<% } %>
+			>
 		</div>
 		<div class="container">
 			<div class="row">
